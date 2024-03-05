@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Naz Crypto Coin</title>
+  <link rel="shortcut icon"
+    href="static/assets/img/favicon.png">
+  <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext"
+    rel="stylesheet">
+  <link rel="stylesheet" href="static/assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="static/assets/fonts/themify-icons.css">
+  <link rel="stylesheet" href="static/assets/css/materialdesignicons-min.css">
+  <link rel="stylesheet" href="static/assets/css/style-two.css">
+  <link rel="stylesheet" href="static/assets/css/animate.css">
+  <link rel="stylesheet" href="static/assets/css/magnific-popup.css">
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+  <!-- START NAVBAR -->
+  <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-custom navbar-light sticky">
+    <div class="container">
+      <a class="navbar-brand" href="/index"><img src="static/assets/img/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="mdi mdi-menu"></span>
+      </button><!--end button-->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul id="navbar-navlist" class="navbar-nav ms-auto">
+            <li class="nav-item "><a class="nav-link" href="/dashboard">DashBoard</a></li>
+              <li class="nav-item mx-3 my-2" style="color: white; font-weight: bolder;">Wallet : {{balance}} NZ </li>
+          <li class="btn-danger"><a class="nav-link" href="/index">Log Out</a></li>
+        </ul>
+        <!--END NAVBAR NAV-->
+      </div>
+      <!--END COLLAPSE-->
+    </div>
+    <!-- END CONTAINER -->
+  </nav>
+  <!-- END NAVBAR -->
+
+  
+    
+    {% block body %}
+
+    {% endblock %}
+  
+  
+
+  <!-- Additional scripts and links (jQuery, Bootstrap JS, etc.) can be included here -->
+  <script src="static/assets/js/jquery-1.12.4.min.js"></script>
+  <!-- Latest compiled and minified Bootstrap -->
+  <script src="static/assets/bootstrap/js/bootstrap.min.js"></script>
+  <!-- modernizer JS -->
+  <script src="static/assets/js/modernizr-2.8.3.min.js"></script>
+  <!-- owl-carousel min js  -->
+  <script src="static/assets/owlcarousel/js/owl.carousel.min.js"></script>
+  <!-- magnific-popup js -->
+  <script src="static/assets/js/jquery.magnific-popup.min.js"></script>
+  <!-- jquery counterup -->
+  <script src="static/assets/js/jquery.counterup.min.js"></script>
+  <script src="static/assets/js/countdown.js"></script>
+  <!-- particles -->
+  <script src="static/assets/js/particles.min.js"></script>
+  <script src="static/assets/js/app.js"></script>
+  <!-- WOW - Reveal Animations When You Scroll -->
+  <script src="static/assets/js/wow.min.js"></script>
+  <!-- scrolltopcontrol js -->
+  <script src="static/assets/js/scrolltopcontrol.js"></script>
+  <!-- scripts js -->
+  <script src="static/assets/js/scripts.js"></script>
+</body>
+
+</html>

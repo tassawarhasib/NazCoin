@@ -1,0 +1,7 @@
+Flask
+Jinja2
+WTForms
+Flask-MySQLdb
+requests
+numpy
+passlib

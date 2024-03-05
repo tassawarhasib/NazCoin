@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+<body>
+  <div style="padding-left: 525px; font-size: medium; color: rgb(255, 255, 255); text-align: center; transform: translateY(180px);">
+    <div style="width: 50%; border-radius: 15px; ">
+      {% from "includes/_formhelpers.html" import render_field %}
+      <form action="" method="POST">
+        <div class="form-group">
+          <div style="font-family: 'Montserrat', sans-serif; padding-left: 5px;">
+            <div class="form-label-group" style="width: 98%; color: rgb(255, 255, 255); font-size: x-large;">
+              <label for="amount" class="form-label">Enter </label>{{ render_field(form.amount, class_="form-control") }}
+            </div>
+          </div>
+          <br>
+          <div style="padding-bottom: 10px;">
+            <button type="submit" class="btn btn-primary btn-block">Buy Now</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</body>
+{% endblock %}

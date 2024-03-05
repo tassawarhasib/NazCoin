@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% extends 'layout.html' %}
+    {% block head %}
+        <!-- Additional head content goes here if needed -->
+    {% endblock %}
+</head>
+
+<body>
+    {% block body %}
+    <div style="margin-left: 35%; margin-right: 35%; margin-top: 10%;">
+        <div style="padding-left: 5%;">
+            {% from "includes/_formhelpers.html" import render_field %}
+            <form method="POST" action="">
+                <div style="color: white; align-items: center; width: 95%;">
+                    <b>  <label for="username" class="form-label"></label>{{ render_field(form.username, class_="form-control") }}</b>
+                </div>
+                <div style="color: white; align-items: center; width: 95%;">
+                  <b>  <label for="username" class="form-label"></label>{{ render_field(form.amount, class_="form-control") }}</b>
+              </div>
+        </div>
+        </br>
+        <div style="padding-left: 18%; transform: translateY(-10px);">
+            <p style="color: rgb(0, 0, 0); padding-left: 115px;">
+                <input class="btn btn-primary btn-block" type="submit" value="SEND" style="color: rgb(0, 0, 0);">
+            </p>
+        </div>
+        </div>
+        </form>
+        {% endblock %}
+</body>
+
+</html>

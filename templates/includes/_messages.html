@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+
+  <!-- Add your CSS styling here -->
+  <style>
+    .flash-messages {
+      position: fixed;
+      top: 100px;
+      right: 10px;
+      max-width: 300px; /* Adjust the max-width as needed */
+      z-index: 1000;
+    }
+
+    .alert {
+      margin-bottom: 10px;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .alert-show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Your HTML template -->
+  <div class="flash-messages">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }} alert-show">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    {% if error %}
+      <div class="alert alert-danger alert-show">
+        {{ error }}
+      </div>
+    {% endif %}
+
+    {% if msg %}
+      <div class="alert alert-success alert-show">
+        {{ msg }}
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Your JavaScript to handle auto-disappear -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var alertElements = document.querySelectorAll('.alert');
+
+      alertElements.forEach(function (alert) {
+        setTimeout(function () {
+          alert.classList.remove('alert-show');
+        }, 5000); // 5000 milliseconds = 5 seconds
+      });
+    });
+  </script>
+
+</body>
+</html>
